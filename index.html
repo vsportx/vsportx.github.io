@@ -18,6 +18,13 @@
             padding: 50px;
             position: relative;
         }
+        .logo {
+            max-width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         .menu-icon {
             position: absolute;
             top: 15px;
@@ -86,36 +93,29 @@
             border-radius: 5px;
             font-weight: bold;
         }
-        .testimonial {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 20px;
-        }
         footer {
             background-color: #222;
-            color: #fff;
+            color: white;
             padding: 20px;
             margin-top: 20px;
         }
-        footer a {
-            color: #ff6600;
+        .socials a {
+            color: white;
             text-decoration: none;
-            font-weight: bold;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .socials img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="Logo Versa SportX" class="logo">
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <div class="menu" id="menu">
             <a href="#">Perfil</a>
@@ -132,38 +132,31 @@
     </nav>
     <div class="container">
         <div class="product">
-            <img src="zapatilla4.jpg" alt="Zapatilla Reebok">
-            <h3>Reebok Classic</h3>
-            <p>S/320.00</p>
+            <img src="zapatilla1.jpg" alt="Zapatilla Nike">
+            <h3>Nike Air Max</h3>
+            <p>S/350.00</p>
             <a href="https://wa.me/tu_numero" class="button">Comprar</a>
         </div>
         <div class="product">
-            <img src="zapatilla5.jpg" alt="Zapatilla New Balance">
-            <h3>New Balance 574</h3>
-            <p>S/400.00</p>
+            <img src="zapatilla2.jpg" alt="Zapatilla Adidas">
+            <h3>Adidas Ultraboost</h3>
+            <p>S/420.00</p>
             <a href="https://wa.me/tu_numero" class="button">Comprar</a>
         </div>
         <div class="product">
-            <img src="zapatilla6.jpg" alt="Zapatilla Converse">
-            <h3>Converse All Star</h3>
-            <p>S/250.00</p>
+            <img src="zapatilla3.jpg" alt="Zapatilla Puma">
+            <h3>Puma RS-X</h3>
+            <p>S/380.00</p>
             <a href="https://wa.me/tu_numero" class="button">Comprar</a>
         </div>
-    </div>
-    <div class="testimonial">
-        <h2>Lo que dicen nuestros clientes</h2>
-        <p>"Las mejores zapatillas que he comprado, calidad y precio inmejorables!" - Juan Pérez</p>
-        <p>"El servicio al cliente es increíble, ¡100% recomendado!" - Ana López</p>
-    </div>
-    <div class="social-links">
-        <h2>Síguenos en redes sociales</h2>
-        <a href="#">📷 Instagram</a>
-        <a href="#">📘 Facebook</a>
-        <a href="#">🎵 TikTok</a>
     </div>
     <footer>
-        <p>&copy; 2024 Versa SportX - Todos los derechos reservados</p>
-        <p><a href="index.html">Volver al inicio</a> | <a href="contacto.html">Contáctanos</a></p>
+        <p>&copy; 2024 Versa SportX - Todos los derechos reservados.</p>
+        <div class="socials">
+            <a href="#"><img src="facebook.png" alt="Facebook">Síguenos en Facebook</a>
+            <a href="#"><img src="instagram.png" alt="Instagram">Instagram</a>
+            <a href="#"><img src="twitter.png" alt="Twitter">Twitter</a>
+        </div>
     </footer>
     <script>
         function toggleMenu() {
