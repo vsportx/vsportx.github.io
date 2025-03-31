@@ -13,9 +13,36 @@
             text-align: center;
         }
         header {
-            background-color: #000;
+            background: url('banner.jpg') center/cover no-repeat;
             color: #fff;
-            padding: 20px;
+            padding: 50px;
+            position: relative;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 15px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 8px 10px;
+        }
+        .menu a:hover {
+            background-color: #555;
         }
         nav {
             background-color: #222;
@@ -59,16 +86,49 @@
             border-radius: 5px;
             font-weight: bold;
         }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <a href="#">Perfil</a>
+            <a href="#">Categorías</a>
+            <a href="#">Ofertas</a>
+        </div>
         <h1>Versa SportX</h1>
-        <p>Encuentra las mejores zapatillas al mejor precio</p>
+        <p>Descubre la nueva colección 2024</p>
     </header>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="catalogo.html">Catálogo</a>
+        <a href="contacto.html">Contáctanos</a>
     </nav>
     <div class="container">
         <div class="product">
@@ -90,8 +150,30 @@
             <a href="https://wa.me/tu_numero" class="button">Comprar</a>
         </div>
     </div>
+    <div class="testimonial">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>"Las mejores zapatillas que he comprado, calidad y precio inmejorables!" - Juan Pérez</p>
+        <p>"El servicio al cliente es increíble, ¡100% recomendado!" - Ana López</p>
+    </div>
+    <div class="social-links">
+        <h2>Síguenos en redes sociales</h2>
+        <a href="#">📷 Instagram</a>
+        <a href="#">📘 Facebook</a>
+        <a href="#">🎵 TikTok</a>
+    </div>
     <footer>
-        <p><a href="index.html">Volver al inicio</a></p>
+        <p>&copy; 2024 Versa SportX - Todos los derechos reservados</p>
+        <p><a href="index.html">Volver al inicio</a> | <a href="contacto.html">Contáctanos</a></p>
     </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
